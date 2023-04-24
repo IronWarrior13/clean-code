@@ -11,7 +11,7 @@
       media="screen" 
       charset="utf-8">
 </head>
-<body>
+<body class="page">
 
   <section class="preview">
     <img 
@@ -26,45 +26,45 @@
 
   <section class="content-section">
     <div class="add">
-      <label for="new-task">Add Item</label>
+      <label class="add__lable" for="new-task">Add Item</label>
       <div class="add-content">
-        <input id="new-task" class="add__input" type="text">
-        <button>Add</button>
+        <input id="new" class="content__input_text" type="text">
+        <button class="add__btn">Add</button>
       </div>
     </div>
 
-    <h3 class="todo__title">Todo</h3>
-    <ul id="incompleteTasks">
-      <li>
-          <input type="checkbox">
-          <label class="task">Pay Bills</label>
-          <input type="text" class="task">
-          <button class="edit">Edit</button>
-          <button class="delete">
-            <img src="/asset/svg/remove.svg" alt="remove icon">
+    <h3 class="content__title">Todo</h3>
+    <ul class="content__list" id="incomplete">
+      <li class="content__item">
+          <input class="content__input_checkbox" name="bills" type="checkbox">
+          <label class="content__lable" for="bills">Pay Bills</label>
+          <input type="text" class="content__input_text">
+          <button class="edit__button">Edit</button>
+          <button class="delete__button">
+            <img class="delete__icon" src="/asset/svg/remove.svg" alt="remove icon">
           </button>
         </li>
 
-        <li class="editMode">
-          <input type="checkbox">
-          <label class="task">Go Shopping</label>
-          <input type="text" value="Go Shopping" class="task">
-          <button class="edit">Save</button>
-          <button class="delete">
-            <img src="/asset/svg/remove.svg" alt="remove icon">
+        <li class="content__item edit">
+          <input class="content__input_checkbox" type="checkbox">
+          <label class="content__lablek">Go Shopping</label>
+          <input type="text" value="Go Shopping" class="content__input_text">
+          <button class="edit__button">Save</button>
+          <button class="delete__button">
+            <img class="delete__icon" src="/asset/svg/remove.svg" alt="remove icon">
           </button>
         </li>
     </ul>
 
-    <h3>Completed</h3>
-    <ul id="completed-tasks">
-      <li>
-        <input type="checkbox" checked>
-        <label class="task">See the Doctor</label>
-        <input type="text" class="task">
-        <button class="edit">Edit</button>
-        <button class="delete">
-          <img src="/asset/svg/remove.svg" alt="remove icon">
+    <h3 class="content__title">Completed</h3>
+    <ul class="content__list" id="completed">
+      <li class="content__item">
+        <input class="content__input_checkbox" name="doctor" type="checkbox" checked>
+        <label class="content__lable" for="doctor">See the Doctor</label>
+        <input type="text" class="content__input_text">
+        <button class="edit__button">Edit</button>
+        <button class="delete__button">
+          <img class="delete__icon" src="/asset/svg/remove.svg" alt="remove icon">
         </button>
       </li>
     </ul>
