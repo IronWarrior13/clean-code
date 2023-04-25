@@ -85,7 +85,7 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('input[type=text]');
+    var editInput=listItem.querySelector('.content__input_text');
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".edit__button");
     var containsClass=listItem.classList.contains("edit__item");
@@ -102,7 +102,7 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("edit__item");
+    listItem.classList.toggle("edit");
 };
 
 
