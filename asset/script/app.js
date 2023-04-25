@@ -35,6 +35,8 @@ var createNewTaskElement=function(taskString){
     label.innerText=taskString;
     label.className='content__lable';
 
+    checkBox.className = `content__input_checkbox`;
+
     //Each elements, needs appending
     listItem.className = `content__item`;
 
@@ -88,7 +90,7 @@ var editTask=function(){
     var editInput=listItem.querySelector('.content__input_text');
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".edit__button");
-    var containsClass=listItem.classList.contains("edit__item");
+    var containsClass=listItem.classList.contains("edit");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -158,7 +160,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector("input[type=checkbox]");
+    var checkBox=taskListItem.querySelector(".content__input_checkbox");
     var editButton=taskListItem.querySelector("button.edit__button");
     var deleteButton=taskListItem.querySelector("button.delete__button");
 
